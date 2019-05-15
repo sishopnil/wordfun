@@ -1,5 +1,33 @@
 {% extends 'base.html' %}
 
 {% block content %}
-home!
+
+<div class="row pt-3">
+	<div class="col-2">
+		<h2><u>Word</u></h2>
+	</div>
+	<div class="col-6">
+		<h2><u>Meaning</u></h2>
+	</div>
+	<div class="col-4">
+		<h2><u>Use in sentence</u></h2>
+	</div>
+</div>
+
+{% for word in words.all %}
+
+<div class="row pt-3">
+	<div class="col-2" onclick="window.location='{% url 'detail' word.id %}';" style="cursor: pointer;">
+		{{word.word}}
+	</div>
+	<div class="col-6" onclick="window.location='{% url 'detail' word.id %}';" style="cursor: pointer;">
+		<p>{{word.meaning}}</p>
+	</div>
+	<div class="col-4" onclick="window.location='{% url 'detail' word.id %}';" style="cursor: pointer;">
+		<p>{{word.usedinsen}}</p>
+	</div>
+</div>
+
+{% endfor %}
+
 {% endblock %}

@@ -1,0 +1,45 @@
+
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+{% if error %}
+
+
+{{ error }}
+
+<br/>
+<br/>
+{% endif %}
+
+
+<h1>Create</h1>
+
+<form method="POST" action="{% url 'create' %}" enctype="multipart/form-data">
+{% csrf_token %}
+
+Title:
+<br />
+<input type= "text" name="word" />
+<br>
+<br>
+Meaning:
+<br/>
+
+<textarea name="meaning" rows="3" cols="40"></textarea>
+<br/>
+<br>
+An Example of uf being used in a sentence:
+<br/>
+<textarea name="usedinsen" rows="3" cols="40"></textarea>
+<br/>
+<br>
+
+<input class="btn btn-primary" type="submit" value="Add Word"/>
+<br>
+<br>
+<br>
+</form>
+
+{%endblock%}

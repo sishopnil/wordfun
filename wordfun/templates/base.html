@@ -52,7 +52,7 @@
             {% if user.is_authenticated %}
                 <li class="nav-item ">
                   <li class="nav-item ">
-                    <a class="nav-link" href="#">Create</span></a>
+                    <a class="nav-link" href="{% url 'create' %}">Create</span></a>
                   </li>
                   <a class="nav-link" href="javascript:{document.getElementById('logout').submit()}">Logout</a>
                   <form id="logout" method="POST" action="{% url 'logout' %}">

@@ -1,0 +1,27 @@
+
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container">
+
+  <div class="">
+    <h2><b><u>{{word.word}}:</u></b></h2>
+    <br>
+  </div>
+  <div class="">
+
+    <h3><b><i>Its Meaning:</i></b></h3>
+    <br>
+    <h4>{{word.meaning}}</h4>
+    <br>
+  </div>
+  <div class="">
+    <h3><b><i>Its Use In Sentence:</i></b></h3>
+    <br>
+    <h4>{{word.usedinsen}}</h4>
+  </div>
+
+</div>
+
+{% endblock %}
